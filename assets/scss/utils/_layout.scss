@@ -1,0 +1,20 @@
+.small-pad {
+    @media #{$small-only} {
+        padding-left: $spacing * 0.5;
+        padding-right: $spacing * 0.5;
+    }
+}
+
+// Margin
+.mb-10 {
+    margin-bottom: rem-calc(10) !important;
+}
+.mb-20 {
+    margin-bottom: rem-calc(20) !important;
+}
+.mt-10 {
+    margin-top: rem-calc(10) !important;
+}
+.mt-20 {
+    margin-top: remc-calc(20) !important;
+}

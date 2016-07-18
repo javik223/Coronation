@@ -1,0 +1,163 @@
+.footer {
+    // Colors for footer and Icons
+    $footer-text-color: darken($medium-gray, 10%);
+    $light-blue-gray: #D3D6DD;
+
+    font-size: rem-calc(13);
+    color: $footer-text-color;
+    position: relative;
+    margin-top: $spacing  * 3;
+    margin-bottom: $spacing  * 3;
+
+    @media #{$medium-up} {
+        margin-top: $spacing  * 6;
+    }
+    
+    ul {
+        margin-left: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        color: $footer-text-color;
+    }
+
+    .official-logo_container {
+        @extend .column;
+        @extend .medium-5;
+        @extend .mb-20;
+        padding-left: 0;
+    }
+
+    .official-logo {
+        max-width: 30%;
+        float: left;
+        padding-right: $spacing * 0.5;
+
+        @media #{$medium-up} {
+            max-width: 40%;
+        }
+    }
+
+    .social-copyright {
+        @extend .medium-6;
+        @extend .column;
+
+        @media #{$medium-up} {
+            text-align: right;
+        }
+    }
+
+    .social-icons {
+        margin-bottom: $spacing;
+
+        .icon {
+            padding-left: $spacing;
+            font-size: rem-calc(20);
+            display: inline-block;
+            color: $light-blue-gray;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
+.published-date {
+    color: gray;
+    text-align: center;
+    position: relative;
+    padding-top: $spacing;
+
+    &:after {
+        content: '';
+        border-bottom: rem-calc(1) solid gray;
+        position: absolute;
+        bottom: rem-calc(-10);
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem-calc(100);
+    }
+}
+
+.article_background {
+    background-color: $white;
+}
+
+.article {
+    @extend .column;
+    background-color: $white;
+    padding-top: $spacing * 6;
+    padding-bottom: $spacing * 6;
+
+    &-large {
+        h1, h2, h3, h4, h5, h6, p, blockquote, .twitter-tweet, ul, ol {
+            @extend .large-8;    
+        }        
+    }
+
+    h1, h2, h3, h4, h5, h6, p, blockquote, .twitter-tweet, ul, ol {
+        @extend .medium-10;
+        @extend .large-6;
+        @extend .medium-centered;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @extend .text-serif;
+        margin-top: $spacing;
+
+        @media #{$medium-up} {
+            margin-top: $spacing * 2;
+        }
+    }
+
+    p:first-child {
+        &::first-letter {
+            float: left;
+            font-size: rem-calc(100);
+            line-height: 1;
+            padding-right: $spacing;
+            @extend .text-serif;
+        }
+    }
+
+    .twitter-tweet {
+        margin-top: $spacing * 2 !important;
+        margin-bottom: $spacing * 2 !important;
+
+        @media #{$medium-up} {
+            margin-top: $spacing * 4 !important;
+            margin-bottom: $spacing * 4 !important;
+        }
+    }
+
+    .instagram-media, .instagram-media-rendered {
+        margin: auto auto !important;
+        display: block;
+        //float: none;
+        clear: both;
+
+        @media #{$medium-up} {
+            max-width: 60% !important;
+            margin-top: $spacing * 4 !important;
+            margin-bottom: $spacing * 4 !important;
+        }
+
+        @media #{$large-up} {
+            max-width: 40% !important;
+        }
+
+        @media #{$large-up} {
+
+        }
+    }
+}
